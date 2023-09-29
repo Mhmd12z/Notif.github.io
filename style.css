@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #f9fafe;
+    position: relative;
+}
+
+.dash {
+    margin-top: 20px;
+    width: 600px;
+    background: white;
+    padding: 20px;
+}
+
+.dash .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dash .header .sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dash .header .num {
+    background: #0b337a;
+    color: #eee;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 2px;
+    width: 25px;
+    text-align: center;
+}
+
+.dash .header .mark {
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    color: gray;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.dash .header .mark:hover {
+    color: rgb(50, 50, 50);
+}
+
+.dash .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notify {
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.notify .main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notify .profile {
+    width: 40px;
+}
+
+.notify .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.notify .content .comment {
+    font-size: 14px;
+}
+
+.notify .comment .name {
+    font-weight: 700;
+}
+
+.notify .comment .msg {
+    font-weight: 700;
+    opacity: .7;
+    transition: all .3s ease-in-out;
+}
+
+.notify span.msg {
+    color: rgb(52, 52, 52);
+}
+
+.notify .comment .msg:hover {
+    color: black;
+}
+
+.notify a.msg {
+    opacity: 1;
+    color: #3e5b91;
+}
+
+.notify .star {
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+}
+
+.notify .time {
+    opacity: .5;
+}
+
+.notify .private {
+    width: 480px;
+    line-height: 22px;
+    font-size: 15px;
+    float: right;
+    border: 1px solid rgba(128, 128, 128, 0.346);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.notify .private:hover {
+    background: #c3cfd8;
+}
+
+.imgCmnt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notify .commentImage {
+    width: 50px;
+}
+
+.dash .star {
+    visibility: visible;
+}
+
+.dash .read .star {
+    display: none;
+}
+
+.dash .read {
+    background: white;
+}
+
+.dash .unread {
+    background: #f6fafd;
+}
+
+.dash .header .mark:hover {
+    color: black;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+}
+
+@media (max-width:767px) {
+    .dash {
+        width: 100%;
+        height: 100%;
+    }
+
+    .notify .private {
+        width: fit-content;
+        margin-top: 10px;
+    }
+
+    .notify .commentImage {
+        width: 40px;
+        transform: translateY(-5px);
+    }
+}
